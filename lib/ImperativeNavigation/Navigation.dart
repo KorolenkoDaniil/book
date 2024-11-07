@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:korcourses/Details.dart';
+import 'package:korcourses/ImperativeNavigation/Details.dart';
 
 class Navigation extends StatelessWidget {
   Navigation({Key? key}) : super(key: key);
