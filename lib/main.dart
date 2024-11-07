@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:korcourses/ImperativeNavigation/Navigation.dart';
+import 'package:korcourses/tabBar/tapBar.dart';
 
 import 'navigationDrawer/MyDrawerWidget.dart';
 
@@ -17,12 +18,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        tabBarTheme: const TabBarTheme(
+          labelColor: Colors.white,
+          labelStyle: TextStyle(color: Colors.grey)
+        )
       ),
-      home: myDrawerWidget()
-
-        // Scaffold(
-        //   body: Navigation(),
-        // ),
+      home:
+        // Navigation(),
+        // myDrawerWidget()
+        tapBar()
     );
   }
 }

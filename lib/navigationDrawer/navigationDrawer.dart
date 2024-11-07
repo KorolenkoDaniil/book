@@ -13,6 +13,7 @@ class navigationDrawer extends StatelessWidget {
         child: Text("Page 1"),
       ),
       drawer: myDrawerWidget(),
+      // endDrawer: myDrawerWidget(), откроет с правой стороны
     );
   }
 }

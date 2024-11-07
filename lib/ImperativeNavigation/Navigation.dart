@@ -16,11 +16,12 @@ class Navigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return MyListView(items[index]);
-      },
+    return Scaffold(
+      body: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return MyListView(items[index]);
+          }),
     );
   }
 }
@@ -35,12 +36,8 @@ class MyListView extends StatelessWidget {
     return ListTile(
       title: Text(title),
       onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => Details(title)
-              )
-          );
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Details(title)));
       },
     );
   }
