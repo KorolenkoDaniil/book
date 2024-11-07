@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:korcourses/ImperativeNavigation/Navigation.dart';
 import 'package:korcourses/tabBar/tapBar.dart';
 
+import 'bottomNavigationBar/bottomNavigationBar.dart';
 import 'navigationDrawer/MyDrawerWidget.dart';
 
 void main() {
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       home:
         // Navigation(),
         // myDrawerWidget()
-        tapBar()
+        // tapBar()
+        BottomNavigationBarExample()
     );
   }
 }
