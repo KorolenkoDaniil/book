@@ -1,36 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-class DataItem {
-  final String title;
-
-  DataItem({required this.title});
-
-  factory DataItem.fromJson(Map<String, dynamic> json) {
-    return DataItem(title: json['title']);
-  }
-}
-
-class MyData {
-  final String items = '{"data": [ '
-      '{"title": "January"},'
-      '{"title": "February"},'
-      '{"title": "March"} '
-      ']}';
-}
-
-class DataSeries {
-  final List<DataItem> dataModel;
-
-  DataSeries({required this.dataModel});
-
-  factory DataSeries.fromJson(Map<String, dynamic> json) {
-    var list = json['data'] as List;
-    List<DataItem> dataList =
-        list.map((dataItem) => DataItem.fromJson(dataItem)).toList();
-    return DataSeries(dataModel: dataList);
-  }
-}
+import 'DataSeries.dart';
 
 class LocalJson extends StatefulWidget {
   const LocalJson({Key? key, required this.title}) : super(key: key);
@@ -46,7 +17,7 @@ class _LocalJsonState extends State<LocalJson> {
 
   Future<String> _loadDataAsset() async {
     return await DefaultAssetBundle.of(context)
-        .loadString('assets/example2.json');
+        .loadString('assets/jsonAssets/example2.json');
   }
 
   Future<DataSeries> fetchData() async {

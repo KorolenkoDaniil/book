@@ -5,6 +5,7 @@ import 'package:korcourses/tabBar/tapBar.dart';
 import 'bottomNavigationBar/bottomNavigationBar.dart';
 import 'classCreation/ReadingClassData.dart';
 import 'navigationDrawer/MyDrawerWidget.dart';
+import 'localJSON/usingLocalJSON.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +31,11 @@ class MyApp extends StatelessWidget {
         // myDrawerWidget()
         // tapBar()
         // BottomNavigationBarExample()
-        ReadingClassData()
+        // ReadingClassData()
+        LocalJson(title: 'Local JSON Example'),
     );
   }
 }
+
+
+
