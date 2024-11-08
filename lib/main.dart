@@ -3,6 +3,7 @@ import 'package:korcourses/ImperativeNavigation/Navigation.dart';
 import 'package:korcourses/tabBar/tapBar.dart';
 
 import 'bottomNavigationBar/bottomNavigationBar.dart';
+import 'classCreation/ReadingClassData.dart';
 import 'navigationDrawer/MyDrawerWidget.dart';
 
 void main() {
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         // Navigation(),
         // myDrawerWidget()
         // tapBar()
-        BottomNavigationBarExample()
+        // BottomNavigationBarExample()
+        ReadingClassData()
     );
   }
 }
